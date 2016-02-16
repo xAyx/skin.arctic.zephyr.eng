@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window type="dialog" id="1199">
+    <zorder>1</zorder>
+    <visible>system.getbool(lookandfeel.enablerssfeeds) + !Window.IsVisible(SettingsScreenCalibration.xml) + Window.IsVisible(home)</visible>
+    <include>Animation.FadeIn</include>
+    <include>Animation.FadeOut</include>
+    <controls>
+        <control type="image">
+            <right>9</right>
+            <bottom>8</bottom>
+            <width>32</width>
+            <height>32</height>
+            <texture colordiffuse="$VAR[ColorHighlight]">common/rss.png</texture>
+        </control>
+        <control type="rss">
+            <left>10</left>
+            <bottom>9</bottom>
+            <height>35</height>
+            <right>42</right>
+            <font>RSS</font>
+            <textcolor>Dark2</textcolor>
+            <headlinecolor>Dark2</headlinecolor>
+            <titlecolor>Dark1</titlecolor>
+        </control>
+    </controls>
+</window>

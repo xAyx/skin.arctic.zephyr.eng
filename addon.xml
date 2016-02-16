@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+    id="skin.xayx.arctic.zephyr.eng"
+    version="2.1.4"
+    name="Arctic: Zephyr Eng by xAyx"
+    provider-name="jurialmunkey/xAyx">
+    <requires>
+        <import addon="xbmc.gui" version="5.10.0"/>
+        <import addon="script.skinshortcuts" version="0.4.0"/>
+        <import addon="service.library.data.provider" version="0.1.0"/>
+        <import addon="script.skin.helper.service" version="0.0.1"/>
+        <import addon="script.extendedinfo" version="3.0.0"/>
+        <import addon="script.globalsearch" version="5.0.0"/>
+        <import addon="script.image.resource.select" version="0.0.5"/>
+        <import addon="script.toolbox" version="1.0.0"/>
+    </requires>
+    <extension
+    point="xbmc.gui.skin"
+    defaultthemename="Textures.xbt"
+    debugging="false"
+    effectslowdown="1">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Clean, Minimal, Elegant, Simple, Light.</summary>
+        <description lang="en">Arctic: Zephyr is the third iteration of the Arctic skin created by jurialmunkey and modded by xAyx. Arctic focuses on being simple, clean and minimalistic with a light spin.</description>
+        <platform>all</platform>
+        <license>Creative Commons Non Commercial 3.0 License</license>
+    </extension>
+</addon>

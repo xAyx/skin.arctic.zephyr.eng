@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window>
+    <defaultcontrol always="true">9315</defaultcontrol>
+    <animation effect="fade" start="100" end="0" time="2000" tween="quadratic">WindowClose</animation>
+    <onload>SetProperty(SkinInitStarted,1,home)</onload>
+    <controls>
+        <control type="image" description="Background">
+            <include>Dimensions_Fullscreen</include>
+            <texture colordiffuse="Background">common/bg.jpg</texture>
+            <visible>IsEmpty(Skin.String(StartupPlaylist))</visible>
+        </control>
+        <control type="button" id="9315">
+            <visible allowhiddenfocus="true">false</visible>
+            <onfocus condition="System.HasAddon(script.skin.info.service)">RunScript(script.skin.info.service)</onfocus>
+            <onfocus condition="IsEmpty(Window(home).Property(SkinInitStarted)) + !IsEmpty(Skin.String(StartupPlaylist))">PlayMedia($ESCINFO[Skin.String(StartupPlaylist)])</onfocus>
+            <onfocus condition="!Player.HasVideo + !IsEmpty(Skin.String(StartupPlaylist))">ReplaceWindow(Home)</onfocus>
+            <onfocus condition="IsEmpty(Skin.String(StartupPlaylist))">AlarmClock(GoHome,ReplaceWindow(home),00:01,silent,false)</onfocus>
+        </control>
+        <control type="label">
+            <description>Loading</description>
+            <posx>-145</posx>
+            <height>90%</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>Arctic [COLOR=$VAR[ColorHighlight]]Zephyr[/COLOR]</label>
+            <font>EpisodeNumber</font>
+            <textcolor>Dark1</textcolor>
+            <visible>IsEmpty(Skin.String(StartupPlaylist))</visible>
+        </control>
+        <control type="image">
+            <posx>945</posx>
+            <posy>558</posy>
+            <height>4</height>
+            <width>327</width>
+            <texture colordiffuse="Startup">common/white.png</texture>
+        </control>
+        <control type="image">
+            <posx>945</posx>
+            <posy>620</posy>
+            <height>4</height>
+            <width>327</width>
+            <texture colordiffuse="Startup">common/white.png</texture>
+        </control>
+        <control type="label">
+            <description>Loading</description>
+            <posx>290</posx>
+            <posy>580</posy>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>[COLOR=$VAR[ColorHighlight]]xAyx[/COLOR] Edition</label>
+            <font>Credit</font>
+            <textcolor>Dark1</textcolor>
+            <visible>IsEmpty(Skin.String(StartupPlaylist))</visible>
+        </control>
+    </controls>
+</window>
