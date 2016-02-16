@@ -26,5 +26,6 @@
         <description lang="en">Arctic: Zephyr is the third iteration of the Arctic skin created by jurialmunkey and modded by xAyx. Arctic focuses on being simple, clean and minimalistic with a light spin.</description>
         <platform>all</platform>
         <license>Creative Commons Non Commercial 3.0 License</license>
+        <source>https://github.com/xAyx/skin.arctic.zephyr.eng</source>
     </extension>
 </addon>
