@@ -644,16 +644,17 @@
     </include>
     <include name="Furniture_Home_Flags">
         <control type="grouplist">
+			<visible>Skin.HasSetting(show.homeflags)</visible>
             <visible>!Skin.HasSetting(furniture.flags)</visible>
             <visible>Control.HasFocus(301)</visible>
             <include>Animation.FadeIn</include>
             <include>Animation.FadeOut</include>
-            <left>SidePad</left>
-            <centerbottom>NavBarPad</centerbottom>
+			<bottom>350</bottom>
+			<right>20</right>
             <width>1400</width>
             <height>64</height>
             <orientation>horizontal</orientation>
-            <align>left</align>
+            <align>right</align>
             <itemgap>24</itemgap>
             <usecontrolcoords>true</usecontrolcoords>
             <control type="group">

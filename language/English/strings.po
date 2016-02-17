@@ -635,3 +635,7 @@ msgstr ""
 msgctxt "#31288"
 msgid "Bar Color"
 msgstr ""
+
+msgctxt "#31289"
+msgid "Show home media flags"
+msgstr ""

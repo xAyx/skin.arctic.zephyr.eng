@@ -378,6 +378,7 @@
                         <label>31246</label>
                         <selected>Skin.HasSetting(furniture.flagicons)</selected>
                         <onclick>Skin.ToggleSetting(furniture.flagicons)</onclick>
+                        <enable>!Skin.HasSetting(furniture.flags)</enable>
                     </control>
                     <!-- Show Numeric Rating -->
                     <control type="radiobutton" id="9507" description="Numeric Rating">
@@ -389,8 +390,18 @@
                         <onclick>Skin.ToggleSetting(furniture.numericrating)</onclick>
                         <enable>!Skin.HasSetting(furniture.flags)</enable>
                     </control>
+                    <!-- Home Media Flags -->
+                    <control type="radiobutton" id="9508" description="Home Media Flags">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9104)</visible>
+                        <include>DefSettingsButton</include>
+                        <label>31289</label>
+                        <selected>Skin.HasSetting(show.homeflags)</selected>
+                        <onclick>Skin.ToggleSetting(show.homeflags)</onclick>
+                        <enable>!Skin.HasSetting(furniture.flags)</enable>
+                    </control>
                     <!-- Show Now Playing Info -->
-                    <control type="radiobutton" id="9508" description="Now Playing">
+                    <control type="radiobutton" id="9509" description="Now Playing">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>
                         <include>DefSettingsButton</include>
@@ -399,7 +410,7 @@
                         <onclick>Skin.ToggleSetting(furniture.nowplaying)</onclick>
                     </control>
                     <!-- Show Clearlogo -->
-                    <control type="radiobutton" id="9509" description="Clearlogo">
+                    <control type="radiobutton" id="9510" description="Clearlogo">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>
                         <include>DefSettingsButton</include>
@@ -408,7 +419,7 @@
                         <onclick>Skin.ToggleSetting(furniture.logo)</onclick>
                     </control>
                     <!-- Show Reflections -->
-                    <control type="radiobutton" id="9510" description="Reflections">
+                    <control type="radiobutton" id="9511" description="Reflections">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>
                         <include>DefSettingsButton</include>
