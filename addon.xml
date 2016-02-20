@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
     id="skin.xayx.arctic.zephyr.eng"
-    version="2.1.4"
+    version="2.2.0"
     name="Arctic: Zephyr Eng by xAyx"
     provider-name="jurialmunkey/xAyx">
     <requires>
