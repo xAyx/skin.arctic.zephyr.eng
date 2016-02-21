@@ -391,7 +391,7 @@
                         <enable>!Skin.HasSetting(furniture.flags)</enable>
                     </control>
                     <!-- Home Media Flags -->
-                    <control type="radiobutton" id="9508" description="Home Media Flags">
+                    <!-- <control type="radiobutton" id="9508" description="Home Media Flags">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>
                         <include>DefSettingsButton</include>
@@ -399,7 +399,7 @@
                         <selected>Skin.HasSetting(show.homeflags)</selected>
                         <onclick>Skin.ToggleSetting(show.homeflags)</onclick>
                         <enable>!Skin.HasSetting(furniture.flags)</enable>
-                    </control>
+                    </control> -->
                     <!-- Show Now Playing Info -->
                     <control type="radiobutton" id="9509" description="Now Playing">
                         <width>1310</width>
