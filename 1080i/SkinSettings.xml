@@ -160,18 +160,8 @@
                         <onclick>SetProperty(Dialog.4.BuiltIn,Skin.Reset(home.slideshowpath))</onclick>
                         <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31269])</onclick> 
                     </control>
-                    <!-- Display Widget On Pressing "up" (Classic) -->
-                    <control type="radiobutton" id="9204" description="Classic Widget Auto show">
-                        <width>1310</width>
-                        <visible>ControlGroup(9100).HasFocus(9101)</visible>
-                        <include>DefSettingsButton</include>
-                        <label>31200</label>
-                        <enable>Skin.HasSetting(home.classicwidgets)</enable>
-                        <selected>Skin.HasSetting(home.dontautoshowwidget)</selected>
-                        <onclick>Skin.ToggleSetting(home.dontautoshowwidget)</onclick>
-                    </control>
                     <!-- Replace Widget Fanart With Background -->
-                    <control type="radiobutton" id="9205" description="Show slideshow instead of fanart">
+                    <control type="radiobutton" id="9204" description="Show slideshow instead of fanart">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9101)</visible>
                         <include>DefSettingsButton</include>
@@ -179,6 +169,16 @@
                         <selected>Skin.HasSetting(home.dontshowfanart)</selected>
                         <!-- <onclick condition="!Skin.HasSetting(home.dontshowfanart) + IsEmpty(Skin.String(home.slideshowpath))">Skin.SetPath(home.slideshowpath)</onclick> -->
                         <onclick>Skin.ToggleSetting(home.dontshowfanart)</onclick>
+                    </control>
+                    <!-- Display Widget On Pressing "up" (Classic) -->
+                    <control type="radiobutton" id="9205" description="Classic Widget Auto show">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9101)</visible>
+                        <include>DefSettingsButton</include>
+                        <label>31200</label>
+                        <enable>Skin.HasSetting(home.classicwidgets)</enable>
+                        <selected>Skin.HasSetting(home.dontautoshowwidget)</selected>
+                        <onclick>Skin.ToggleSetting(home.dontautoshowwidget)</onclick>
                     </control>
                     <!-- Show Icons -->
                     <control type="radiobutton" id="9206" description="Show Icons">
