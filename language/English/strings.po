@@ -280,6 +280,10 @@ msgctxt "#31179"
 msgid "Show clearlogo"
 msgstr ""
 
+msgctxt "#31180"
+msgid "Hub widget"
+msgstr ""
+
 msgctxt "#31181"
 msgid "Select icon"
 msgstr ""
