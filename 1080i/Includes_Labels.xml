@@ -297,4 +297,8 @@
         <value condition="System.HasAddon(script.image.resource.select)">Installed ($INFO[System.AddonVersion(script.image.resource.select)])</value>
         <value>Not installed</value>
     </variable>
+    <variable name="StatusAutoCompletion">
+        <value condition="System.HasAddon(plugin.program.autocompletion)">Installed ($INFO[System.AddonVersion(plugin.program.autocompletion)])</value>
+        <value>Not installed</value>
+    </variable>
 </includes>

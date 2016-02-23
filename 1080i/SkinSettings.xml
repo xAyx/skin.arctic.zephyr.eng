@@ -691,6 +691,16 @@
                         <onclick condition="System.HasAddon(service.nextup.notification)">Addon.OpenSettings(service.nextup.notification)</onclick>
                         <onclick condition="!System.HasAddon(service.nextup.notification)">RunPlugin(plugin://service.nextup.notification)</onclick>
                     </control>
+					<!-- Auto Completion -->
+                    <control type="button" id="9812" description="Auto Completion">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
+                        <include>DefSettingsButton</include>
+                        <label>plugin.program.autocompletion</label>
+                        <label2>$VAR[StatusAutoCompletion]</label2>
+                        <onclick condition="System.HasAddon(plugin.program.autocompletion)">Addon.OpenSettings(plugin.program.autocompletion)</onclick>
+                        <onclick condition="!System.HasAddon(plugin.program.autocompletion)">RunPlugin(plugin://plugin.program.autocompletion)</onclick>
+                    </control>
 					 
 					 
                     <!-- RESET -->
