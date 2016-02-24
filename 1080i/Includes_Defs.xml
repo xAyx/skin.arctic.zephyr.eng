@@ -473,11 +473,6 @@
         <value>plugin://script.extendedinfo?info=airingtodaytvshows</value>
     </variable>
 
-    <variable name="DefWeatherIcon">
-        <value condition="System.HasAddon(script.image.resource.select) + !IsEmpty(Skin.String(weather.icons.path))">$INFO[Skin.String(weather.icons.path)]</value>
-        <value>resource://resource.images.weathericons.default/</value>
-    </variable>
-	
 
     <include name="DefExtendedInfoList">
         <bottom>80</bottom>
