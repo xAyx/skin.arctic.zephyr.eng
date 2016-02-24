@@ -124,6 +124,10 @@ msgctxt "#31129"
 msgid "Custom widget 2"
 msgstr ""
 
+msgctxt "#31130"
+msgid "h"
+msgstr ""
+
 msgctxt "#31133"
 msgid "Hide watched"
 msgstr ""

@@ -327,7 +327,7 @@
                                 <height>36</height>
                                 <font>Tiny</font>
                                 <textcolor>Dark2</textcolor>
-                                <label fallback="19055">$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
+                                <label fallback="19055">$INFO[Window(Home).Property(SkinHelper.ListItemDuration.Hours),,$LOCALIZE[31130]] $INFO[Window(Home).Property(SkinHelper.ListItemDuration.Minutes),, $LOCALIZE[31102]]</label>
                                 <aligny>center</aligny>
                             </control>
                         </control>
