@@ -57,6 +57,7 @@
                         <height>66</height>
                         <texture colordiffuse="Black30">$INFO[ListItem.Icon]</texture>
                         <visible>substring(ListItem.Icon,special://skin/extras/icons)</visible>
+                        <visible>Skin.HasSetting(home.showicons) | substring(Window.Property(groupname),x111)</visible>
                     </control>
                     <control type="label">
                         <left>60</left>
@@ -90,6 +91,7 @@
                         <height>66</height>
                         <texture colordiffuse="$VAR[ChmIcon]">$INFO[ListItem.Icon]</texture>
                         <visible>substring(ListItem.Icon,special://skin/extras/icons)</visible>
+                        <visible>Skin.HasSetting(home.showicons) | substring(Window.Property(groupname),x111)</visible>
                     </control>
                     <control type="label">
                         <left>60</left>
@@ -274,7 +276,7 @@
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtons</include>
-                    <visible>stringcompare(Window.Property(groupname),movieshub) | stringcompare(Window.Property(groupname),episodeshub) | Skin.HasSetting(home.showicons)</visible>
+                    <visible>substring(Window.Property(groupname),x111) | Skin.HasSetting(home.showicons)</visible>
                 </control>
                 <control type="button" id="405" description="Set Submenu">
                     <width>100%</width>
