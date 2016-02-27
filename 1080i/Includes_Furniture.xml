@@ -391,10 +391,10 @@
                 <height>64</height>
                 <align>left</align>
                 <aligny>center</aligny>
-				<label>$INFO[Window(Home).Property(SkinHelper.ListItemDuration.Hours),,$LOCALIZE[31130]] $INFO[Window(Home).Property(SkinHelper.ListItemDuration.Minutes),, $LOCALIZE[31102]]</label> 
+                <label>$INFO[ListItem.Duration,, $LOCALIZE[31102]  ]</label>
                 <font>Flag</font>
                 <textcolor>Dark1</textcolor>
-				<visible>!IsEmpty(Window(Home).Property(SkinHelper.ListItemDuration.Minutes)) + [Control.IsVisible(500) | Control.IsVisible(53) | Control.IsVisible(52) | Control.IsVisible(55)]</visible> 
+                <visible>!IsEmpty(ListItem.Duration) + [Control.IsVisible(500) | Control.IsVisible(53) | Control.IsVisible(52) | Control.IsVisible(55)]</visible>
             </control>
             <control type="image">
                 <width>64</width>
