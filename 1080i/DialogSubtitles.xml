@@ -27,10 +27,6 @@
                 <aspectratio align="left" aligny="top">keep</aspectratio>
             </control>
             
-            
-            
-
-            
             <!-- Subs List -->
             <control type="list" id="120">
                 <left>15</left>
@@ -91,19 +87,16 @@
                         <colordiffuse>Black70</colordiffuse>
                         <visible>ListItem.property(sync)</visible>
                     </control>
-
                     <control type="label">
                         <posx>227</posx>
-                        <right>30</right>
+                        <width>870</width>
                         <height>66</height>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label,,  •  ]$INFO[ListItem.Label2]</label>
                         <textcolor>Black70</textcolor>
                         <font>Small</font>
                     </control>
-
                 </itemlayout>
-
                 <focusedlayout height="69" width="1100">
                     <control type="image">
                         <height>66</height>
@@ -161,7 +154,7 @@
                     </control>
                     <control type="label">
                         <posx>227</posx>
-                        <right>30</right>
+                        <width>870</width>
                         <height>66</height>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label,,  •  ]$INFO[ListItem.Label2]</label>
@@ -169,11 +162,8 @@
                         <font>Small</font>
                         <scroll>true</scroll>
                     </control>
-         
                 </focusedlayout>
-
             </control>
-            
             
             <!-- Search Labels -->
             <control type="label" id="140">
@@ -241,9 +231,7 @@
                         <textcolor>Black30</textcolor>
                         <selectedcolor>$VAR[ColorHighlight2]</selectedcolor>
                     </control>
-
                 </itemlayout>
-
                 <focusedlayout height="69" width="485">
                     <control type="image">
                         <height>66</height>
@@ -277,15 +265,8 @@
                         <selectedcolor>$VAR[ColorHighlight2]</selectedcolor>
                         <visible>Control.HasFocus(150)</visible>
                     </control>
-                    
                 </focusedlayout>
             </control>
-            
-            
-            
-                
-            
-            
         </control>
     </controls>
 </window>
