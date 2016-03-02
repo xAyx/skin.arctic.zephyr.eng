@@ -74,14 +74,14 @@
                         <label fallback="N/A">$INFO[Window(Weather).Property(Current.Temperature),[B],[/B]°]</label>
                     </control>
                     <control type="textbox">
-                        <top>78%</top>
-                        <height>130</height>
+                        <top>74%</top>
+                        <height>160</height>
                         <left>20</left>
                         <right>20</right>
                         <align>center</align>
                         <font>Tiny</font>
                         <textcolor>PanelWhite100</textcolor>
-                        <label fallback="161">$INFO[Window(Weather).Property(Current.Condition),,[CR]]$INFO[Window(Weather).Property(Current.FeelsLike),$LOCALIZE[402] ,°[CR]]$INFO[Window(Weather).Property(Current.Humidity),, $LOCALIZE[406][CR]]$INFO[Window(Weather).Property(Current.Wind)]</label>
+                        <label fallback="161">$INFO[Window(Weather).Property(Current.Condition),,[CR]]$INFO[Window(Weather).Property(Current.FeelsLike),$LOCALIZE[402] ,°[CR]]$INFO[Window(Weather).Property(Current.Humidity),, $LOCALIZE[406][CR]]$INFO[Window(Weather).Property(Current.Wind),Wind ]</label>
                     </control>
                 </control>
                 <control type="group">
