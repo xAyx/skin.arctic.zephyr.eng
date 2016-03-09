@@ -3,7 +3,7 @@
 <window id="2901">
     <include condition="!Player.PauseEnabled">OSDFocusStop</include>
     <include condition="Player.PauseEnabled">OSDFocusPause</include>
-    
+	
     <onunload>ClearProperty(osdshowinfo,home)</onunload>
     <controls>
         <control type="group">
@@ -22,58 +22,61 @@
                 <effect type="fade" end="0" start="100" time="150"/>
             </animation>
             <!-- Sub Menu -->
-            <control type="group">
-                <visible allowhiddenfocus="true">ControlGroup(9300).HasFocus() | Control.HasFocus(3)</visible>
-
+            <control type="grouplist" id="9300">
+				<visible>!Window.IsVisible(SliderDialog) + ControlGroup(9300).HasFocus() | Control.HasFocus(3)</visible>
+				<animation effect="slide" start="0,0" end="0,60" time="0" condition="!VideoPlayer.HasSubtitles">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,120" time="0" condition="![VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled]">Conditional</animation>
                 <include>Animation.SlideUp</include>
                 <include>Animation.FadeOut</include>
-                <bottom>72</bottom>
-                <centerleft>572</centerleft>
+                <left>425</left>
+                <bottom>50</bottom>
                 <width>316</width>
-                <height>152</height>
-                <control type="image">
-                    <description>background image</description>
+				<height>272</height>
+                <itemgap>0</itemgap>
+                <onup>3</onup>
+                <ondown>3</ondown>
+                <onleft>3</onleft>
+                <onright>3</onright>
+                <orientation>vertical</orientation>
+                <control type="button" id="9301" description="Download">
                     <width>100%</width>
-                    <height>100%</height>
-                    <colordiffuse>$VAR[OSDPanel]</colordiffuse>
-                    <texture border="16">common/rounded-shadow8.png</texture>
+                    <height>60</height>
+                    <textcolor>$VAR[OSDPanelWhite70]</textcolor>
+                    <include>DefVideoOSDButton</include>
+                    <label>33003</label>
+					<onclick>Close</onclick>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+					<onclick>ActivateWindow(SubtitleSearch)</onclick>
                 </control>
-                <control type="grouplist" id="9300">
-                    <include>Animation.FadeIn.Delay</include>
-                    <include>Animation.FadeOut</include>
-                    <top>16</top>
-                    <bottom>16</bottom>
-                    <left>8</left>
-                    <right>8</right>
-                    <onup>3</onup>
-                    <ondown>3</ondown>
-                    <onleft>3</onleft>
-                    <onright>3</onright>
-                    <itemgap>0</itemgap>
-                    <orientation>vertical</orientation>
-                    <scrolltime>200</scrolltime>
-                    <control type="button" id="9301" description="Download">
-                        <width>100%</width>
-                        <height>60</height>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        <include>DefContextButton</include>
-                        <label>33003</label>
-                        <onclick>ActivateWindow(SubtitleSearch)</onclick>
-                    </control>
-                    <control type="togglebutton" id="9302" description="Enable Subs">
-                        <width>100%</width>
-                        <height>60</height>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        <include>DefContextButton</include>
-                        <label>$LOCALIZE[305] $INFO[VideoPlayer.SubtitlesLanguage,[UPPERCASE],[/UPPERCASE]]</label>
-                        <altlabel>13106</altlabel>
-                        <onclick>NextSubtitle</onclick>
-                        <usealttexture>!VideoPlayer.SubtitlesEnabled</usealttexture>
-                    </control>
+				<control type="button" id="9302" description="Subtitle offset">
+                    <width>100%</width>
+                    <height>60</height>
+                    <textcolor>$VAR[OSDPanelWhite70]</textcolor>
+                    <include>DefVideoOSDButton</include>
+					<label>22006</label>
+					<onclick>SubtitleDelay</onclick>
+					<visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</visible>
+				</control>
+				<control type="button" id="9303" description="Subtitle Selector">
+                    <width>100%</width>
+                    <height>60</height>
+                    <textcolor>$VAR[OSDPanelWhite70]</textcolor>
+                    <include>DefVideoOSDButton</include>
+					<label>$INFO[VideoPlayer.SubtitlesLanguage,[UPPERCASE],[/UPPERCASE]]</label>
+					<onclick>CycleSubtitle</onclick>
+					<visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</visible>
+				</control>
+                <control type="togglebutton" id="9304" description="Enable Subs">
+                    <width>100%</width>
+                    <height>60</height>
+                    <textcolor>$VAR[OSDPanelWhite70]</textcolor>
+                    <include>DefVideoOSDButton</include>
+                    <label>305</label>
+                    <altlabel>13106</altlabel>
+                    <onclick>ShowSubtitles</onclick>
+					<visible>VideoPlayer.HasSubtitles</visible>
                 </control>
-            
             </control>
-            
             <control type="grouplist" id="100">
                 <top>13</top>
                 <left>50</left>
@@ -86,9 +89,6 @@
                 <onright condition="Player.CanRecord + VideoPlayer.Content(LiveTV)">9003</onright>
                 <include>DefOSDUpDown</include>
                 <usecontrolcoords>true</usecontrolcoords>
-        
-                
-
                 <control type="button" id="1">
                     <description>Audio</description>
                     <label>292</label>
@@ -96,7 +96,6 @@
                     <onclick>ActivateWindow(124)</onclick>
                     <include>DefOSDButtons</include>
                 </control>
-
                 <control type="button" id="2">
                     <description>Video Settings</description>
                     <label>291</label>
@@ -104,19 +103,17 @@
                     <onclick>ActivateWindow(123)</onclick>
                     <include>DefOSDButtons</include>
                 </control>
-                
                 <control type="button" id="3">
-                    <onup>9302</onup>
+                    <onup>9304</onup>
                     <ondown>9301</ondown>
                     <description>Subs</description>
                     <align>left</align>
                     <label>$LOCALIZE[287]</label>
-                    <onclick>Action(ShowSubtitles)</onclick>
                     <include>DefOSDButtons</include>
+					<enable>!VideoPlayer.Content(LiveTV)</enable>
                 </control>
             </control>
             <control type="grouplist" id="101">
-            
                 <top>13</top>
                 <width>100%</width>
                 <height>48</height>
@@ -128,9 +125,7 @@
                 <ondown>noop</ondown>
                 <include condition="!Skin.HasSetting(osd.usetheme)">OSDVideoControls</include>
                 <include condition="Skin.HasSetting(osd.usetheme)">OSDVideoControlsFlip</include>
-            
             </control>
-            
             <control type="grouplist" id="102">
                 <top>13</top>
                 <right>50</right>
@@ -142,16 +137,12 @@
                 <onright>1</onright>
                 <include>DefOSDUpDown</include>
                 <usecontrolcoords>true</usecontrolcoords>
-                
                 <include condition="!VideoPlayer.Content(livetv) + [VideoPlayer.HasMenu | [!VideoPlayer.Content(movies) + !VideoPlayer.Content(episodes)]]">OSDDVDMenu</include>
                 <include condition="!VideoPlayer.HasMenu + VideoPlayer.Content(episodes)">OSDExtraInfoTV</include>
                 <include condition="!VideoPlayer.HasMenu + VideoPlayer.Content(movies)">OSDExtraInfoMOVIES</include>
-                
                 <include condition="!VideoPlayer.Content(livetv)">OSDVideosRight</include>
                 <include condition="VideoPlayer.Content(livetv)">OSDPVRRight</include>
             </control>
         </control>
-    
     </controls>
-
 </window>
