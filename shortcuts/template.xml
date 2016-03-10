@@ -6,6 +6,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
 
         <controls>
+			<visible>!substring(Container(300).ListItem.Property(widget),Weather,left)</visible>
             <control type="list" id="301">
                 <skinshortcuts>visibility</skinshortcuts>
                 <description>Plugin Content Widget</description>

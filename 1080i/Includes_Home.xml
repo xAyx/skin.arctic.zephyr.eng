@@ -978,7 +978,6 @@
 									<align>left</align>
 									<textcolor>Dark2</textcolor>
 									<label>$INFO[Window(Weather).Property(Current.Condition),,[CR]]$INFO[Window(Weather).Property(Current.FeelsLike),$LOCALIZE[402] ,]$INFO[System.TemperatureUnits][CR]$INFO[Window(Weather).Property(Current.Humidity),, $LOCALIZE[406]][CR]$INFO[Window(Weather).Property(Current.Wind),Wind ]</label>
-									<visible>substring(Container(300).ListItem.Property(widget),Weather,left)</visible>
 								</control>
 				            </control>	
                             <control type="group">
